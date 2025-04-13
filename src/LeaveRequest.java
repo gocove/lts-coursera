@@ -1,4 +1,4 @@
-public class LeaveRequest {
+public abstract class LeaveRequest implements Approvable {
     protected int requestId;
     protected Employee employee;
     protected String startDate;
@@ -14,5 +14,14 @@ public class LeaveRequest {
         this.endDate = endDate;
         this.status = "Pending";
         this.reason = reason;
+    }
+    public abstract int calculateLeaveDays();
+
+    public boolean processRequest() {
+        System.out.println("Process generic leave request...");
+        return true;
+    }
+    public int getDuration() {
+        return 0;
     }
 }
