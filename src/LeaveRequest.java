@@ -1,10 +1,10 @@
 public class LeaveRequest {
-    private int requestId;
-    private Employee employee;
-    private String startDate;
-    private String endDate;
-    private String status;  // "Pending", "Approved", "Denied"
-    private String reason;
+    protected int requestId;
+    protected Employee employee;
+    protected String startDate;
+    protected String endDate;
+    protected String status;  // "Pending", "Approved", "Denied"
+    protected String reason;
 
     public LeaveRequest(int requestId, Employee employee, 
             String startDate, String endDate, String reason) {
